@@ -54,8 +54,8 @@ class Test1and1ApacheImage(Test1and1Common):
     def test_apache_var_www_html(self):
         self.file_mode_test("/var/www/html", "drwxrwxrwx")
 
-    def test_php_curl(self):
-        self.check_success("curltest.php")
+    '''def test_php_curl(self):
+        self.check_success("curltest.php")'''
 
     def test_php_gd(self):
         self.check_success("gdtest.php")
