@@ -38,14 +38,14 @@ RUN \
 		a2enmod proxy_fcgi fastcgi && \
 	echo "APACHE" && \
     	sed -i -e 's/DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm/DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm/g' /etc/apache2/mods-available/dir.conf && \
-	echo "COMPOSER" && \
-		mkdir /tmp/composer/ && \
-	    cd /tmp/composer && \
-	    curl -sS https://getcomposer.org/installer | php && \
-	    mv composer.phar /usr/local/bin/composer && \
-	    chmod a+x /usr/local/bin/composer && \
-	    cd / && \
-	    rm -rf /tmp/composer && \
+	#echo "COMPOSER" && \
+	#	mkdir /tmp/composer/ && \
+	#    cd /tmp/composer && \
+	#    curl -sS https://getcomposer.org/installer | php && \
+	#    mv composer.phar /usr/local/bin/composer && \
+	#    chmod a+x /usr/local/bin/composer && \
+	#    cd / && \
+	#    rm -rf /tmp/composer && \
 	echo "PECL packages" && \
 		apt-get install -y libgpgme11-dev make pkg-config libmagickwand-dev libssl-dev && \
 		chmod 777 /usr/lib/php/${PHPVER} && \
